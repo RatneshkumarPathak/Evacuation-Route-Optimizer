@@ -1,4 +1,5 @@
 #include "graph.h"
+#include "algorithms.h"
 
 int main() {
     Graph g(5);
@@ -11,6 +12,6 @@ int main() {
     g.addEdge(3, 4, 1, 2);
 
     g.printGraph();
-
+    dijkstra(g, 0);
     return 0;
 }
