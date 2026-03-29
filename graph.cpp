@@ -24,3 +24,14 @@ void Graph::printGraph() {
         cout << endl;
     }
 }
+
+void Graph::blockEdge(int u, int v) {
+
+    for (auto &edge : adj[u]) {
+        if (edge.to == v) edge.blocked = true;
+    }
+
+    for (auto &edge : adj[v]) {
+        if (edge.to == u) edge.blocked = true;
+    }
+}

@@ -26,6 +26,7 @@ public:
 
     Graph(int V);
     void addEdge(int u, int v, double dist, double risk);
+    void blockEdge(int u, int v);
     void printGraph();
 };
 

@@ -3,6 +3,7 @@
 #include <limits>
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -46,4 +47,29 @@ void dijkstra(Graph &g, int source, double alpha, double beta) {
     for (int i = 0; i < V; i++) {
         cout << "Node " << i << " cost = " << dist[i] << endl;
     }
+
+    cout << "\nPaths:\n";
+
+for (int i = 0; i < V; i++) {
+
+    if (i == source) continue;
+
+    cout << "Path to " << i << ": ";
+
+    vector<int> path;
+    int current = i;
+
+    while (current != -1) {
+        path.push_back(current);
+        current = parent[current];
+    }
+
+    reverse(path.begin(), path.end());
+
+    for (int node : path) {
+        cout << node << " ";
+    }
+
+    cout << endl;
+}
 }

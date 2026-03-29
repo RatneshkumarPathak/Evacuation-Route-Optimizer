@@ -14,7 +14,7 @@ int main() {
     g.printGraph();
     double alpha = 1.0;
     double beta = 2.0;
-
+    g.blockEdge(1, 3);
     dijkstra(g, 0, alpha, beta);
     return 0;
 }
