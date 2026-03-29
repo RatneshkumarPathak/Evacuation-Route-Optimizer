@@ -3,6 +3,6 @@
 
 #include "graph.h"
 
-void dijkstra(Graph &g, int source);
+void dijkstra(Graph &g, int source, double alpha, double beta);
 
 #endif

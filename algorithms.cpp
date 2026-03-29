@@ -1,10 +1,12 @@
 #include "algorithms.h"
 #include <queue>
 #include <limits>
+#include <vector>
+#include <iostream>
 
 using namespace std;
 
-void dijkstra(Graph &g, int source) {
+void dijkstra(Graph &g, int source, double alpha, double beta) {
     int V = g.V;
 
     vector<double> dist(V, numeric_limits<double>::max());
@@ -12,9 +14,9 @@ void dijkstra(Graph &g, int source) {
 
     priority_queue<pair<double, int>, vector<pair<double, int>>, greater<>> pq;
 
-    // tuning parameters
-    double alpha = 1.0;  // distance weight
-    double beta = 2.0;   // risk weight
+    // // tuning parameters
+    // double alpha = 1.0;  // distance weight
+    // double beta = 2.0;   // risk weight
 
     dist[source] = 0;
     pq.push({0, source});

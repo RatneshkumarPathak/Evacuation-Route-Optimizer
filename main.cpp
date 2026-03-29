@@ -12,6 +12,9 @@ int main() {
     g.addEdge(3, 4, 1, 2);
 
     g.printGraph();
-    dijkstra(g, 0);
+    double alpha = 1.0;
+    double beta = 2.0;
+
+    dijkstra(g, 0, alpha, beta);
     return 0;
 }
